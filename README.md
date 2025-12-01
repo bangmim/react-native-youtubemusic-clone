@@ -6,8 +6,7 @@ React Native로 구현한 **YouTube Music 홈 화면 클론 프로젝트**입니
 
 ## 구현 영상 (Preview)
 | <img src="assets/preview.gif" width="300" /> |
-[![YouTube]([https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/cbqwafX-eoA](https://youtube.com/shorts/vHIRL9L9Tlk)
-
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/shorts/vHIRL9L9Tlk)
 
 ### 주요 기능 (Features)
 
