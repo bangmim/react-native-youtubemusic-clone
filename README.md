@@ -5,7 +5,7 @@ React Native로 구현한 **YouTube Music 홈 화면 클론 프로젝트**입니
 **배경 그라데이션 변화**, **플레이리스트 미니/풀스크린 전환** 인터랙션을 구현하는 데 초점을 두었습니다.
 
 ## 구현 영상 (Preview)
-| <img src="assets/preview.gif" width="300" /> |
+| <img src="src/assets/preview.gif" width="300" /> |
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/shorts/vHIRL9L9Tlk)
 
 ### 주요 기능 (Features)
