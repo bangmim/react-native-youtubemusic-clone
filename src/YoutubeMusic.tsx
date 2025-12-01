@@ -3,7 +3,7 @@ import {useRef, useState} from 'react';
 
 import HeaderBackground from './components/header/HeaderBackground';
 import LogoHeader from './components/header/LogoHeader';
-import CateforyHeader from './components/header/CateforyHeader';
+import CategoryHeader from './components/header/CategoryHeader';
 import Bottom from './components/bottom/Bottom';
 import MusicListSmall from './components/musiclist/MusicListSmall';
 import MusicListMedium from './components/musiclist/MusicListMedium';
@@ -34,7 +34,7 @@ export default function YoutubeMusic() {
           headerBgAnim={headerBgAnim}
         />
         <LogoHeader headerAnim={headerAnim} />
-        <CateforyHeader
+        <CategoryHeader
           selectedCategory={selectedCategory}
           setSelectedCategory={category => setSelectedCategory(category)}
           headerAnim={headerAnim}

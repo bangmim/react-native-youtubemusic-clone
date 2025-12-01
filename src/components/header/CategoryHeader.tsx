@@ -1,7 +1,7 @@
 import {useCallback} from 'react';
-import {Animated, ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {Animated, Text, TouchableOpacity, View} from 'react-native';
 
-export default function CateforyHeader({
+export default function CategoryHeader({
   selectedCategory,
   setSelectedCategory,
   headerAnim,
@@ -11,14 +11,19 @@ export default function CateforyHeader({
   headerAnim: Animated.Value;
 }) {
   const category = ['휴식', '에너지 충전', '집중', '운동', '출퇴근/등하교'];
-  const onPressCategory = useCallback((index: number) => {
-    const data = selectedCategory === index ? undefined : index;
-    setSelectedCategory(data);
-  }, []);
+
+  const onPressCategory = useCallback(
+    (index: number) => {
+      const data = selectedCategory === index ? undefined : index;
+      setSelectedCategory(data);
+    },
+    [selectedCategory, setSelectedCategory],
+  );
+
   return (
     <View>
       <Animated.ScrollView
-        horizontal={true}
+        horizontal
         showsHorizontalScrollIndicator={false}
         style={{
           paddingVertical: 20,
@@ -31,6 +36,7 @@ export default function CateforyHeader({
         }}
         contentContainerStyle={{paddingHorizontal: 10}}>
         {category.map((value, index) => {
+          const isSelected = index === selectedCategory;
           return (
             <TouchableOpacity
               key={index}
@@ -40,17 +46,16 @@ export default function CateforyHeader({
                   padding: 8,
                   paddingHorizontal: 16,
                   borderWidth: 0.5,
-                  backgroundColor:
-                    index === selectedCategory ? '#fff' : '#ffffff10',
+                  backgroundColor: isSelected ? '#fff' : '#ffffff10',
                   borderColor: '#ffffff30',
                   marginHorizontal: 4,
                   borderRadius: 8,
                 }}>
                 <Text
                   style={{
-                    color: index === selectedCategory ? '#111' : 'white',
+                    color: isSelected ? '#111' : 'white',
                   }}>
-                  {value}{' '}
+                  {value}
                 </Text>
               </View>
             </TouchableOpacity>
@@ -60,3 +65,5 @@ export default function CateforyHeader({
     </View>
   );
 }
+
+
